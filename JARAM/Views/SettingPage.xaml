@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="JARAM.Views.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JARAM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="60*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ToggleSwitch Grid.Row="0" Name="ExitToggleSwitch" IsOn="False" Header="마지막 뒤로 가기를 누를 때 앱 종료" OnContent="종료" OffContent="종료하지 않음" Toggled="ExitToggleSwitch_Toggled" FontSize="18"/>
+        </Grid>
+        
+        <Line Grid.Row="1" X1="0" X2="1" Stretch="Fill" HorizontalAlignment="Stretch" Stroke="Black" StrokeThickness="1"/>
+        
+        <Grid Grid.Row="2" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="앱 정보" FontSize="24"/>
+            <TextBlock Grid.Row="1" Name="AppVersionTextBlock" FontSize="18" VerticalAlignment="Center" Margin="0,5"/>
+            <TextBlock Grid.Row="3" FontSize="18" Margin="0" Padding="0">
+                <Run Text="앱 개발자" />
+                <LineBreak/>
+                <Run Text="  이주원 (자람 29기) - Master" FontSize="16"/>
+                <LineBreak/>
+                <Run Text="  권요한 (자람 31기)" FontSize="16"/>
+            </TextBlock>
+            <Grid Grid.Row="4" Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="개발자 이메일:" FontSize="18" VerticalAlignment="Center"/>
+                <HyperlinkButton Name="EmailLink"  Grid.Column="1" FontSize="18" Content="good9797@outlook.com" Margin="10,0,0,0" Click="EmailLink_Click" />
+            </Grid>
+            <TextBlock Grid.Row="5" x:Name="CopyrightTextBlock" Text="ⓒ 2016. 이주원(자람 29기) all righs reserved." FontSize="16" TextWrapping="Wrap" />
+        </Grid>
+    </Grid>
+</Page>

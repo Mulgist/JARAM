@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="JARAM.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JARAM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" x:Name="textBlock" HorizontalAlignment="Center" Text="J A R A M" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="72" Margin="0,30,0,20"/>
+        <TextBlock Grid.Row="2" x:Name="connent" Text="환영한다, 친구들." HorizontalAlignment="Center" Margin="0,20,0,20" TextWrapping="WrapWholeWords"/>
+        <TextBox Grid.Row="3" Name="IDTextBox" PlaceholderText="아이디" Header="ID" FontSize="18" Width="280" Margin="0,10,0,0" IsTextPredictionEnabled="False" IsSpellCheckEnabled="False" KeyDown="IDTextBox_KeyDown"/>
+        <PasswordBox Grid.Row="4" Name="PasswordInputBox" PlaceholderText="비밀번호" Header="Password" FontSize="18" Width="280" Margin="0,0,0,10" PasswordRevealMode="Peek"  KeyDown="PasswordInputBox_KeyDown"/>
+        <CheckBox Grid.Row="5" Name="SaveLoginCheckBox" HorizontalAlignment="Center" Content="ID/Password 저장" FontSize="18"/>
+        <Grid Grid.Row="6" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <ProgressRing Grid.Column="0" Name="LoginProgressRing" FontSize="18" HorizontalAlignment="Right" Margin="0,0,10,30" IsActive="False" />
+            <TextBlock Grid.Column="1" Name="LoginProgressTextBlock" FontSize="18"/>
+        </Grid>
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="LoginButton" Content="로그인" HorizontalAlignment="Right" Height="40" Width="140" FontSize="18" Margin="0,20,20,20" Click="LoginButton_Click"/>
+            <Button Grid.Column="1" x:Name="IDFindButton" Content="ID찾기" Height="40" Width="140" FontSize="18" Margin="20,20,0,20"/>
+        </Grid>
+        <TextBlock Grid.Row="9" Text="2016 JARAM" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,5"/>
+        <TextBlock Grid.Row="10" Text="ⓒ 2016. 이주원(자람 29기) all righs reserved. " FontSize="16" HorizontalAlignment="Center" Margin="0,5,0,10"/>
+    </Grid>
+    
+</Page>
